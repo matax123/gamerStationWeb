@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerStation</title>
+    <link rel="icon" href="./img/icon.svg">
+    <link href="./styles/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/beforeLoad.js"></script>
+</head>
+
+<body class="preload color8 backgroundColor5" data-spy="#scroll" data-target="#nav" data-offset="20">
+    <dialog open id="loading" class="flex flex-col">
+        <span class="lds-dual-ring"></span>
+        <span>Loading...</span>
+    </dialog>
+
+    <main class="w-full  flex flex-col justify-center items-center">
+        <div class="container h-full">
+            <header class="flex flex-row justify-between items-center p-3 my-5 px-5 w-full"
+                style="font-weight: 600; position: sticky">
+                <div class="flex flex-row gap-10">
+                    <button onclick="changeDayTime()">
+                        <svg id="dayIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm2.312-4.897c0 2.206 1.794 4 4 4s4-1.794 4-4-1.794-4-4-4-4 1.794-4 4zm10 0c0 3.314-2.686 6-6 6s-6-2.686-6-6 2.686-6 6-6 6 2.686 6 6z" />
+                        </svg>
+                        <svg id="nightIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-1.109 0-2.178.162-3.197.444 3.826 5.933-2.026 13.496-8.781 11.128l-.022.428c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12z" />
+                        </svg>
+                    </button>
+                    <div class="flex flex-row px-5 gap-10">
+                        <a class="hidden sm:block" href="">INICIO</a>
+                        <a class="hidden sm:block"
+                            href="vista/buscador/index.html?category=COMPUTADOR DE ESCRITORIO">DESKTOPS</a>
+                        <a class="hidden sm:block" href="vista/buscador/index.html?category=NOTEBOOK">NOTEBOOKS</a>
+                    </div>
+                </div>
+            </header>
+            <hr>
+        </div>
+    </main>
+    <section class="flex items-center justify-center h-[calc(100vh-89px)] bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-transparent to-transparent">
+        <div class="text-center px-8 sm:px-16">
+            <h1 class="text-8xl font-extrabold tracking-wide color7">GamerStation</h1>
+            <p class="mt-4 text-lg sm:text-xl">
+                Open your games with any <span class="font-semibold">gamepad</span>
+            </p>
+            <div class="mt-8">
+                <a href="#explore"
+                    class="px-6 py-3 text-lg font-semibold backgroundColor5 borderColor6 border-2 rounded-lg shadow-lg transition duration-300">
+                    Descargar
+                </a>
+                <a href="#learn-more"
+                    class="ml-4 px-6 py-3 text-lg font-semibold border-2 border-gray-500 hover:border-white hover:text-white rounded-lg transition duration-300">
+                    Ver más
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-900 text-white py-16"> <!-- Seccion Demo visual -->
+        <div class="max-w-6xl mx-auto px-6 pb-4 lg:px-8">
+            <!-- Title -->
+            <h2 class="text-3xl font-extrabold text-center mb-8">
+                Explora GamerStation en Acción
+            </h2>
+            <p class="text-center text-gray-400 mb-12">
+                Descubre cómo GamerStation puede transformar tu experiencia de juego con esta demostración visual.
+            </p>
+            <!-- Video/Image Preview -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <!-- Video or Animated Screenshot -->
+                <div class="w-full md:w-2/3">
+                    <div class="relative">
+                        <iframe class="w-full h-[400px] rounded-lg shadow-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <!-- Features Side Info -->
+                <div class="flex flex-col items-start text-left md:w-1/3 space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Gran compatibilidad</h3>
+                        <p class="text-gray-400">
+                            Compatible con Windows 10 y 11, gamepads de Xbox, PlayStation, Nintendo Switch y genéricos.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Fácil Montaje</h3>
+                        <p class="text-gray-400">
+                            Usa tus accesos directos e imágenes de juegos para personalizar tu biblioteca.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Orden alfabético</h3>
+                        <p class="text-gray-400">
+                            Explora tu lista de juegos ordenada alfabéticamente.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Experiencia Inmersiva</h3>
+                        <p class="text-gray-400">
+                            Control total sin teclado ni mouse. Juega desde tu sofá con total comodidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="backgroundColor2 darkBackgroundColor1 text-gray-800 darkColor2 py-20"> <!-- Seccion Opensource -->
+        <div class="max-w-6xl mx-auto px-6 mb-4 lg:px-8">
+            <!-- Title -->
+            <h2 class="text-3xl font-extrabold text-center mb-8">
+                Proyecto Open Source
+            </h2>
+            <p class="text-center mb-12">
+                GamerStation es completamente <span class="font-bold text-indigo-600">Open Source</span>. Explora,
+                personaliza y contribuye al desarrollo de esta increíble herramienta.
+            </p>
+            <!-- Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Left: Benefits -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">¿Por qué Open Source?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-600 flex-shrink-0 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Transparencia total: Accede al código y entiende cómo funciona.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-600 flex-shrink-0 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Personalización infinita: Modifica GamerStation según tus necesidades.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-600 flex-shrink-0 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Colaboración: Únete a la comunidad y contribuye al proyecto.
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right: GitHub CTA -->
+                <div class="flex flex-col items-center">
+                    <img class="w-48 mb-4 rounded-full"
+                        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                        alt="GitHub Logo">
+                    <p class="text-center mb-4">
+                        ¡Explora el repositorio en GitHub y sé parte del desarrollo de GamerStation!
+                    </p>
+                    <a href="https://github.com/tu-repositorio"
+                        class="inline-block bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300">
+                        Ver en GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="relative bg-gray-900 text-white sm:pb-16 sm:bg-[url('./img/gamepad.jpeg')] bg-cover bg-center"> <!-- Seccion compatibilidad -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
+        <div class="relative max-w-6xl mx-auto p-4 px-6 lg:px-8">
+            <!-- Title -->
+            <div class="flex items-center justify-center text-3xl font-extrabold text-center mb-8">
+                <h2 class="py-4 px-16 bg-white bg-opacity-10 rounded-lg shadow-lg">Compatibilidad</h2>
+            </div>
+
+            <!-- Compatibility Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Supported Operating Systems -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-green-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-6.219-8.781M9 21h.01"></path>
+                        </svg>
+                        Sistemas Operativos Soportados
+                    </h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-300 !important">
+                        <li>Windows 10</li>
+                        <li>Windows 11</li>
+                        <li>Windows 7</li>
+                        <li>Windows 8</li>
+                    </ul>
+                </div>
+
+                <!-- Supported Gamepads -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 text-green-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-6.219-8.781M9 21h.01"></path>
+                        </svg>
+                        Soporte de Gamepads
+                    </h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-300">
+                        <li>Xbox</li>
+                        <li>PlayStation</li>
+                        <li>Nintendo Switch</li>
+                        <li>Genéricos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gradient-to-r from-indigo-600 text-white py-12 shadow-inner shadow-2xl"> <!-- Seccion Descargar -->
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+            <!-- Title -->
+            <h2 class="text-4xl font-extrabold mb-4">
+                ¡Empieza a Jugar con GamerStation!
+            </h2>
+            <!-- Subtitle -->
+            <p class="text-lg font-light mb-8">
+                Descarga la aplicación ahora y toma el control total de tu biblioteca de juegos desde tu gamepad.
+            </p>
+            <!-- Buttons -->
+            <div class="flex justify-center space-x-4">
+                <a href="#download"
+                    class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
+                    Descargar Ahora
+                </a>
+                <a href="#features"
+                    class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-indigo-600 transition duration-300">
+                    Saber Más
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.6/xlsx.full.min.js"></script> -->
+<script src="./js/common.js"></script>
+
+</html>

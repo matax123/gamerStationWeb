@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamerStation</title>
-    <link rel="icon" href="./img/icon.svg">
+    <link rel="icon" href="./img/icon.ico">
     <link href="./styles/styles.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/beforeLoad.js"></script>
@@ -22,30 +22,21 @@
             <header class="flex flex-row justify-between items-center p-3 my-5 px-5 w-full"
                 style="font-weight: 600; position: sticky">
                 <div class="flex flex-row gap-10">
-                    <button onclick="changeDayTime()">
-                        <svg id="dayIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24">
-                            <path
-                                d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm2.312-4.897c0 2.206 1.794 4 4 4s4-1.794 4-4-1.794-4-4-4-4 1.794-4 4zm10 0c0 3.314-2.686 6-6 6s-6-2.686-6-6 2.686-6 6-6 6 2.686 6 6z" />
-                        </svg>
-                        <svg id="nightIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-1.109 0-2.178.162-3.197.444 3.826 5.933-2.026 13.496-8.781 11.128l-.022.428c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12z" />
-                        </svg>
-                    </button>
+                    <svg id="nightIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-1.109 0-2.178.162-3.197.444 3.826 5.933-2.026 13.496-8.781 11.128l-.022.428c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12z" />
+                    </svg>
                     <div class="flex flex-row px-5 gap-10">
                         <a class="hidden sm:block" href="">INICIO</a>
-                        <a class="hidden sm:block"
-                            href="vista/buscador/index.html?category=COMPUTADOR DE ESCRITORIO">DESKTOPS</a>
-                        <a class="hidden sm:block" href="vista/buscador/index.html?category=NOTEBOOK">NOTEBOOKS</a>
                     </div>
                 </div>
             </header>
             <hr>
         </div>
     </main>
-    <section class="flex items-center justify-center h-[calc(100vh-89px)] bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-transparent to-transparent">
+    <section
+        class="flex items-center justify-center h-[calc(100vh-89px)] bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-transparent to-transparent">
         <div class="text-center px-8 sm:px-16">
             <h1 class="text-8xl font-extrabold tracking-wide color7">GamerStation</h1>
             <p class="mt-4 text-lg sm:text-xl">
@@ -77,8 +68,8 @@
                 <!-- Video or Animated Screenshot -->
                 <div class="w-full md:w-2/3">
                     <div class="relative">
-                        <iframe class="w-full h-[400px] rounded-lg shadow-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                            frameborder="0"
+                        <iframe class="w-full h-[400px] rounded-lg shadow-lg"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
@@ -176,7 +167,8 @@
     </section>
 
 
-    <section class="relative bg-gray-900 text-white sm:pb-16 sm:bg-[url('./img/gamepad.jpeg')] bg-cover bg-center py-8"> <!-- Seccion compatibilidad -->
+    <section class="relative bg-gray-900 text-white sm:pb-16 sm:bg-[url('./img/gamepad.jpeg')] bg-cover bg-center py-8">
+        <!-- Seccion compatibilidad -->
         <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
         <div class="relative max-w-6xl mx-auto p-4 px-6 lg:px-8">
             <!-- Title -->
@@ -224,7 +216,8 @@
             </div>
         </div>
     </section>
-    <section id="descargar" class="bg-gradient-to-r from-indigo-600 text-white py-12 shadow-inner shadow-2xl"> <!-- Seccion Descargar -->
+    <section id="descargar" class="bg-gradient-to-r from-indigo-600 text-white py-12 shadow-inner shadow-2xl">
+        <!-- Seccion Descargar -->
         <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
             <!-- Title -->
             <h2 class="text-4xl font-extrabold mb-4">
@@ -236,7 +229,7 @@
             </p>
             <!-- Buttons -->
             <div class="flex justify-center space-x-4">
-                <a href="./downloads/GamerStation_1.0.4.zip"
+                <a href="https://drive.google.com/file/d/17ElAO-TfXwiLBEusxuofWHR2MFaQ-k77/view?usp=sharing" target="_blank"
                     class="bg-white text-indigo-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
                     Descargar Portable
                 </a>

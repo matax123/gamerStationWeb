@@ -1,21 +1,21 @@
-function changeDayTime() {
-    const dayIcon = document.getElementById('dayIcon');
-    const nightIcon = document.getElementById('nightIcon');
-    if (dayTime == 'day') {
-        dayTime = 'night';
-        dayIcon.classList.add('hidden');
-        nightIcon.classList.remove('hidden');
-        document.documentElement.setAttribute('theme', 'dark');
-        localStorage.setItem('dayTime', 'night');
-    }
-    else {
-        dayTime = 'day';
-        dayIcon.classList.remove('hidden');
-        nightIcon.classList.add('hidden');
-        document.documentElement.setAttribute('theme', 'light');
-        localStorage.setItem('dayTime', 'day');
-    }
-}
+// function changeDayTime() {
+//     const dayIcon = document.getElementById('dayIcon');
+//     const nightIcon = document.getElementById('nightIcon');
+//     if (dayTime == 'day') {
+//         dayTime = 'night';
+//         dayIcon.classList.add('hidden');
+//         nightIcon.classList.remove('hidden');
+//         document.documentElement.setAttribute('theme', 'dark');
+//         localStorage.setItem('dayTime', 'night');
+//     }
+//     else {
+//         dayTime = 'day';
+//         dayIcon.classList.remove('hidden');
+//         nightIcon.classList.add('hidden');
+//         document.documentElement.setAttribute('theme', 'light');
+//         localStorage.setItem('dayTime', 'day');
+//     }
+// }
 
 //Global variables
 let backendUrl = 'https://localhost:8000';
@@ -25,8 +25,8 @@ let waitToLoadFunction = async function () { };
 window.onload = async function () {
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    if (dayIcon != null && dayTime == 'day') dayIcon.classList.remove('hidden');
-    else if (nightIcon != null) nightIcon.classList.remove('hidden');
+    // if (dayIcon != null && dayTime == 'day') dayIcon.classList.remove('hidden');
+    // else if (nightIcon != null) nightIcon.classList.remove('hidden');
 
 
     await Promise.all([waitToLoadFunction()]);
